@@ -1,7 +1,7 @@
 <script>
   import "@unocss/reset/tailwind.css"
   import "uno.css"
-  import Nav from "../lib/Nav.svelte"
+
   import { isDark } from "../stores/dark"
   import { themeCheck } from "../lib/composables/darkMode"
   import { onMount } from "svelte"
@@ -16,11 +16,7 @@
 </script>
 
 <main>
-  <Nav />
-  <div flex="~ col" items="center" p="4">
-    <slot />
-    <p class="opacity-20 font-italic">[Default Layout]</p>
-  </div>
+  <slot />
 </main>
 
 <style>
